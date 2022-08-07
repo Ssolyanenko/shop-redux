@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-export const initialState = true;
+export let initialState = false;
 
 // noinspection JSAnnotator
 const userSlice = createSlice({
@@ -9,8 +9,9 @@ const userSlice = createSlice({
   reducers: {
     logIn() {
       if(localStorage.getItem('auth')){
-        return initialState;
+        return initialState = true
       }
+      return initialState = true
 
     },
     logOut  (state) {
